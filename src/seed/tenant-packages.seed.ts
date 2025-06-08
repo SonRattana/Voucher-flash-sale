@@ -27,9 +27,18 @@ export async function seedTenantPackages(dataSource: DataSource) {
     },
     {
       name: 'Gold',
-      max_products: 1,
+      max_products: 500,
       max_vouchers: 2000,
       max_flash_sales: 100,
+      support_realtime_tracking: true,
+      support_schedule: true,
+      support_dashboard: true,
+    },
+    {
+      name: 'Enterprise',
+      max_products: -1, // Không giới hạn
+      max_vouchers: -1, // Không giới hạn
+      max_flash_sales: -1, // Không giới hạn
       support_realtime_tracking: true,
       support_schedule: true,
       support_dashboard: true,

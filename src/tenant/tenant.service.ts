@@ -40,7 +40,7 @@ export class TenantService {
   }
 
   async update(id: string, dto: Partial<CreateTenantDto>): Promise<Tenant> {
-    await this.findOne(id); // Kiểm tra trước
+    await this.findOne(id);
     await this.tenantRepo.update(id, dto);
     return this.findOne(id);
   }
